@@ -10,6 +10,7 @@ jobs:
           submodules: recursive
       - uses: actions/setup-node@v3
         with:
+          node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - uses: actions/setup-python@v4
         with: 
