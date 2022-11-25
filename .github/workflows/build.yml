@@ -1,0 +1,21 @@
+name: Build library webpack and upload
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v3
+      - uses: actions/setup-python@v4
+        with: 
+          python-version: '3.8'
+      - run: pip install -r mavlink/pymavlink/requirements.txt
+      - run: npm install
+      - run: npm run build
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: mavlink-js-dist
+          path: dist/
