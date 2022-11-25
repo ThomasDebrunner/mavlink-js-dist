@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "jspack": "^0.0.4",
+    "long": "^5.2.1",
+    "stream-browserify": "^3.0.0",
+    "underscore": "^1.13.6",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "generate-package-json-webpack-plugin": "^2.6.0",
+    "terser-webpack-plugin": "^5.3.6",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "scripts": {
+    "build": "./gen_mavlink.sh && webpack"
+  }
+}
