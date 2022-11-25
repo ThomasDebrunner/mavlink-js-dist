@@ -2,11 +2,16 @@ const GeneratePackageJsonPlugin = require('generate-package-json-webpack-plugin'
 const path = require('path');
 const TerserPlugin = require("terser-webpack-plugin");
 
+const REPO_OWNER = 'ThomasDebrunner'
 
 const DIST_PACKAGE_JSON = {
-    name: 'mavlink-dist',
+    name: `mavlink-js-dist`,
     version: '0.0.1',
     main: './mavlink.js',
+    repository: {
+        type: 'git',
+        url: `https://github.com/${REPO_OWNER}/mavlink-js-dist`
+    }
 }
 
 
